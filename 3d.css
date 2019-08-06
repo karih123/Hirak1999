@@ -1,0 +1,97 @@
+body{
+    margin-left: 40%;
+	background-image: url(2655429.jpg );
+	background-repeat: no-repeat;
+	background-size:1530px 790px;*/
+}
+
+.text{
+	position: absolute;
+    font-family: serif;
+
+
+}
+.text h1{
+	font-size:50px;
+	color: #F53A1A ;
+	
+	background-repeat: repeat-x;
+	-webkit-background-clip:text ;
+	animation: animate 15s linear infinite;
+	text-shadow: 3px 3px 5px #151414 ;
+
+}
+
+@keyframes animate 
+{
+	0%{background-position: left 0px top 10px ;}
+
+	40%{background-position: left 800px top 10px; }
+	
+}
+.rotating-box{
+	margin-top: 100px;
+
+	width: 400px;
+	height: 400px;
+	margin: 10px auto;
+	perspective: 800px;
+
+}
+.single-rb{
+	width: 400px;
+	animation: rotate 15s linear infinite;
+	transform-style:preserve-3d;
+	margin-top: 120px;
+
+
+}
+.single-rb img{
+	height: 400px;
+	width: 400px;
+
+}
+.single-rb div{
+	position: absolute;
+	width: 400px;
+	height: 400px;
+
+}
+.front-side{
+	transform : translateZ(200px);
+
+}
+.back-side{
+	transform:rotateY(180deg)
+	translateZ(200px);
+
+}
+.left-side{
+transform:rotateY(-90deg)
+translateX(-200px);
+transform-origin: left;
+}
+.right-side{
+transform:rotateY(90deg)
+translateX(200px);
+transform-origin: right;
+}
+.top-side{
+transform:rotateY(-90deg)
+translateY(-200px);
+transform-origin: top;
+}
+.bottom-side{
+transform:rotateY(90deg)
+translateY(-200px);
+transform-origin: bottom;
+}
+@keyframes rotate
+{
+	0%{transform:rotateY(0deg);}
+	
+	100%{transform: rotateY(360deg);}	
+}
+
+
+
